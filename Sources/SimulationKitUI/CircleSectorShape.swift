@@ -15,7 +15,7 @@ public struct CircleSectorShape: Shape {
     
     let sector: CircleSector
     
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         var path = Path()
         path.move(to: CGPoint(x: sector.center.x, y: sector.center.y))
         let heading = sector.heading < 0 ? sector.heading + Double.pi * 2 : sector.heading

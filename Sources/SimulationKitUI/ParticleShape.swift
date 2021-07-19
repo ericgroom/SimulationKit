@@ -17,7 +17,7 @@ public struct ParticleShape: Shape {
     let position: Vec2
     let radius: CGFloat
     
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         var path = Path()
         let center = CGPoint(x: position.x, y: position.y)
         let origin = CGPoint(x: center.x - radius, y: center.y - radius)
