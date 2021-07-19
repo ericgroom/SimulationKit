@@ -8,7 +8,11 @@
 import SwiftUI
 import SimulationKit
 
-struct CircleSectorShape: Shape {
+public struct CircleSectorShape: Shape {
+    public init(sector: CircleSector) {
+        self.sector = sector
+    }
+    
     let sector: CircleSector
     
     func path(in rect: CGRect) -> Path {

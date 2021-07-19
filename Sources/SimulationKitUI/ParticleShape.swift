@@ -8,7 +8,12 @@
 import SwiftUI
 import SimulationKit
 
-struct ParticleShape: Shape {
+public struct ParticleShape: Shape {
+    public init(position: Vec2, radius: CGFloat) {
+        self.position = position
+        self.radius = radius
+    }
+    
     let position: Vec2
     let radius: CGFloat
     
