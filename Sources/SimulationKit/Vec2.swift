@@ -108,3 +108,11 @@ public struct Vec2: Equatable, Hashable {
         vec * -1
     }
 }
+
+extension Vec2 {
+    public static func random(in size: Size) -> Vec2 {
+        let xs = 0...size.width
+        let ys = 0...size.height
+        return Vec2(x: Double.random(in: xs), y: Double.random(in: ys))
+    }
+}
